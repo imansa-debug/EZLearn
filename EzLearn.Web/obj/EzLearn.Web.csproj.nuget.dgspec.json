@@ -28,7 +28,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj": {
+                "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

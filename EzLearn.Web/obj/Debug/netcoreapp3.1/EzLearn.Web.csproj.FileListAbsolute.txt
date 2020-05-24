@@ -143,3 +143,5 @@ F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\EzL
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MetaTags.cshtml.g.cs
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Styles.cshtml.g.cs
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MainMenu.cshtml.g.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\SuccessRegister.cshtml.g.cs

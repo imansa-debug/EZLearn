@@ -2513,6 +2513,9 @@
       "EzLearn.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EzLearn.DataLayer": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/EzLearn.Core.dll": {}
         },

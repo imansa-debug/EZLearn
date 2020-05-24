@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EzLearn.Core.Services;
+using EzLearn.Core.Services.Interfaces;
 using EzLearn.DataLayer.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,9 +32,13 @@ namespace EzLearn.Web
             {
                 options.UseSqlServer(Configuration.GetConnectionString("EzLearnConnection"));
             });
-            
+
             #endregion
 
+
+            #region IoC
+            services.AddTransient<IUserService, UserService>();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

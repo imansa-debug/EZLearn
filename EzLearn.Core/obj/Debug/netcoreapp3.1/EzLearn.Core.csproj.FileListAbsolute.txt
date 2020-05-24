@@ -8,3 +8,6 @@ F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\Ez
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.pdb
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.runtimeconfig.json
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.runtimeconfig.dev.json
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.pdb
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.csproj.CopyComplete

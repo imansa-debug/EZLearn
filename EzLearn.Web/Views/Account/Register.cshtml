@@ -1,0 +1,134 @@
+﻿@model EzLearn.Core.DTOs.RegisterViewModel
+@{
+    ViewData["Title"] = "ثبت نام ";
+}
+
+<section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+         style="background-image: url(/img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact-mf register-pallet">
+                    <div id="contact" class="box-shadow-full">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="title-box-2">
+                                    <h5 class="title-center">
+                                        <strong>ثبت نام در سایت</strong>
+                                    </h5>
+                                </div>
+                                <div>
+                                    <form asp-action="Register"
+                                          method="post"
+                                     
+                                         >
+                                  
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3">
+                                                <div class="input-group">
+                                                    <span  class="px-3 pt-2 border bg-light"><i class="fa fa-user"></i></span>
+                                                    <input type="text"
+                                                           asp-for="UserName"
+                                                           
+                                                           class="form-control"
+                                                          
+                                                           placeholder="نام و نام خانوادگی"
+                                                          />
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="input-group">
+                                                    <span id="emailaddress" class="px-3 pt-2 border bg-light"><i class="fa fa-envelope"></i></span>
+                                                    <input type="email"
+                                                           asp-for="Email"
+                                                           class="form-control"
+                                                           name="email"
+                                                           id="email"
+                                                           placeholder="ایمیل شما"
+                                                           data-rule="email"
+                                                           data-msg="لطفا ایمیل معتبر وارد کنید" />
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="input-group">
+                                                    <span id="password" class="px-3 pt-2 border bg-light"><i class="fa fa-lock"></i></span>
+
+                                                    <input type="text"
+                                                           asp-for="Password"
+                                                           class="form-control"
+                                                         
+                                                           placeholder="کلمه عبور"/>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="input-group">
+                                                    <span id="password" class="px-3 pt-2 border bg-light"><i class="fa fa-lock"></i></span>
+
+                                                    <input type="text"
+                                                           asp-for="RePassword"
+                                                           class="form-control"
+
+                                                           placeholder=" تکرار کلمه عبور "
+                                                        />
+                                                  
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-12">
+                                                    <div class="input-group mt-2">
+                                                        <a href=""> <i class="fa fa-user"></i> <span class="pr-3">ورود به سایت</span></a>
+                                                    </div>
+                                                </div>
+                                                <div asp-validation-summary="All" class="alere alert-danger"></div>
+                                                <div class="col-md-12">
+                                                    <button type="submit"
+                                                            class="btn btn-success btn-block mt-5 rounded">
+                                                        عضویت
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row align-content-center">
+                <div class="col-sm-12">
+                    <div class="copyright-box">
+                    
+                        <div class="credits">
+                            <!--
+                              All the links in the footer should remain intact.
+                              You can delete the links only if you purchased the pro version.
+                              Licensing information: https://bootstrapmade.com/license/
+                              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+                            -->
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+

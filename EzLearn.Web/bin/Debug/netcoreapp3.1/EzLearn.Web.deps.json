@@ -2126,6 +2126,9 @@
         }
       },
       "EzLearn.Core/1.0.0": {
+        "dependencies": {
+          "EzLearn.DataLayer": "1.0.0"
+        },
         "runtime": {
           "EzLearn.Core.dll": {}
         },
