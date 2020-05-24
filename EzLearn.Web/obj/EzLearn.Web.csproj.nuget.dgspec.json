@@ -4,14 +4,14 @@
     "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj": {}
   },
   "projects": {
-    "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj": {
+    "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Core\\EzLearn.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj",
-        "projectName": "EzLearn.Web",
-        "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj",
+        "projectUniqueName": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Core\\EzLearn.Core.csproj",
+        "projectName": "EzLearn.Core",
+        "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Core\\EzLearn.Core.csproj",
         "packagesPath": "C:\\Users\\iman\\.nuget\\packages\\",
-        "outputPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\obj\\",
+        "outputPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iman\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,177 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj",
+        "projectName": "EzLearn.DataLayer",
+        "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\iman\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj",
+        "projectName": "EzLearn.Web",
+        "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\EzLearn.Web.csproj",
+        "packagesPath": "C:\\Users\\iman\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\iman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Core\\EzLearn.Core.csproj": {
+                "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.Core\\EzLearn.Core.csproj"
+              },
+              "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj": {
+                "projectPath": "F:\\Projects\\Asp.net core\\EZLearn\\EzLearn\\EzLearn.DataLayer\\EzLearn.DataLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

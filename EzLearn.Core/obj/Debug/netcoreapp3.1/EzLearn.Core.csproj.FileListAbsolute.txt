@@ -1,0 +1,10 @@
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.deps.json
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.pdb
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.csprojAssemblyReference.cache
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.AssemblyInfoInputs.cache
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.AssemblyInfo.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\obj\Debug\netcoreapp3.1\EzLearn.Core.pdb
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.runtimeconfig.json
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Core\bin\Debug\netcoreapp3.1\EzLearn.Core.runtimeconfig.dev.json

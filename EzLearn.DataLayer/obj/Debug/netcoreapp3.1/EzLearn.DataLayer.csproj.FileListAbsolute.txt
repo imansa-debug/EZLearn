@@ -1,0 +1,10 @@
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.deps.json
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\obj\Debug\netcoreapp3.1\EzLearn.DataLayer.csprojAssemblyReference.cache
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\obj\Debug\netcoreapp3.1\EzLearn.DataLayer.AssemblyInfoInputs.cache
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\obj\Debug\netcoreapp3.1\EzLearn.DataLayer.AssemblyInfo.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.runtimeconfig.json
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.runtimeconfig.dev.json
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\bin\Debug\netcoreapp3.1\EzLearn.DataLayer.pdb
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\obj\Debug\netcoreapp3.1\EzLearn.DataLayer.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.DataLayer\obj\Debug\netcoreapp3.1\EzLearn.DataLayer.pdb
