@@ -10,7 +10,7 @@ namespace EzLearn.Web.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Salam Iman safari");
+            return View();
         }
     }
 }
