@@ -2,23 +2,17 @@
 @{
     ViewData["Title"] = "پایان ثبت نام";
 }
-    <section class="paralax-mf footer-paralax bg-image sect-mt4 route"
-             style="background-image: url(/img/overlay-bg.jpg)">
-        <div class="overlay-mf"></div>
-        <div style="direction:rtl">
 
-            <div class="alert alert-success " style="margin-top:50px;direction:rtl">
-                <h2 class="text-center">@Model.UserName عزیز !</h2>
-                <br />
-                <p>ثبت نام شما انجام شد ، ایمیلی حاوی لینک فعالسازی به ایمیل "@Model.Email" ارسال شد .</p>
-                <p>جهت ادامه ثبت نام وارد ایمیل خود شوید و روی لینک کلیک کنید .</p>
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">تاپ لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">پایان ثبت نام</li>
+    </ul>
+</nav>
 
-            </div>
-        </div>
-        <div class="overlay-mf"></div>
-    </section>
-
-
-
-
+<div class="alert alert-success">
+    <h2>@Model.UserName عزیز !</h2>
+    <p>ثبت نام شما انجام شد ، ایمیلی حاوی لینک فعالسازی به ایمیمل "@Model.Email" ارسال شد .</p>
+    <p>جهت ادامه ثبت نام وارد ایمیل خود شوید و روی لینک کلیک کنید .</p>
+</div>
 

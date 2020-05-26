@@ -21,6 +21,9 @@ namespace EzLearn.Web.Controllers
         {
             _userService = userService;
         }
+
+
+        #region Register
         [Route("Register")]
         public IActionResult Register()
         {
@@ -45,7 +48,7 @@ namespace EzLearn.Web.Controllers
                 return View(register);
             }
 
-            //TODO :Register User
+
 
             DataLayer.Entities.User.User user = new User()
             {
@@ -55,12 +58,58 @@ namespace EzLearn.Web.Controllers
                 Password = PasswordHelper.EncodePasswordMd5(register.Password),
                 RegisterDate = DateTime.Now,
                 UserAvatar = "Default.jpg",
-                UserName=register.UserName
+                UserName = register.UserName
 
             };
 
             _userService.AddUser(user);
-            return View("SuccessRegister",user);
+            return View("SuccessRegister", user);
+        }
+
+        #endregion
+
+
+        #region Login
+        [Route("Login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [Route("Login")]
+        public IActionResult Login(LoginViewModel login)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            var user = _userService.LoginUser(login);
+            if (user!=null)
+            {
+                if (user.IsActive)
+                {// To Do Login User
+
+                    ViewBag.IsSuccess = true;
+                    return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("Email", "حساب کاربری شما فعال نمی باشد");
+                }
+                
+            }
+            return View();
+        }
+
+        #endregion
+
+
+        public IActionResult ActiveAccount(string id)
+        {
+            ViewBag.IsActive = _userService.ActiveAccount(id);
+
+            return View();
         }
     }
 }

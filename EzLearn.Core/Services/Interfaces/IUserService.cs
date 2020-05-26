@@ -1,4 +1,5 @@
-﻿using EzLearn.DataLayer.Entities.User;
+﻿using EzLearn.Core.DTOs;
+using EzLearn.DataLayer.Entities.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,6 +12,10 @@ namespace EzLearn.Core.Services.Interfaces
         bool IsExistEmail(string email);
 
         int AddUser(User user);
+
+        User LoginUser(LoginViewModel login);
+
+        bool ActiveAccount(string activeCode);
 
     }
 }

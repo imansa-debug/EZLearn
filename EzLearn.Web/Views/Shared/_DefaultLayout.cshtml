@@ -1,49 +1,60 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html class="no-js" dir="rtl" lang="fa-IR">
 <head>
-<partial name="_MetaTags"/>
-
-    <!-- Favicons -->
-    <link href="/img/favicon.png" rel="icon" />
-    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon" />
-    <partial name="_Styles"/>
-
-    <!-- =======================================================
-      Theme Name: DevFolio
-      Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-      Author: BootstrapMade.com
-      License: https://bootstrapmade.com/license/
-    ======================================================= -->
+    <meta charset="UTF-8">
+    <title> تاپ لرن | @ViewData["Title"] </title>
+    <partial name="_MetaTags" />
+    <partial name="_Styles" />
+    <script src="/js/jquery.min.js"></script>
 </head>
+<body>
+    <script src="/js/modernizr-custom.js"></script>
 
-<body id="page-top">
-    <!--/ Nav Star /-->
+    <div class="landing-layer">
+        <div class="container">
+            <nav>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <ul>
+                            <li>
+                                <a href=""> همکاری در فروش </a>
+                                <a href=""> درباره ما </a>
+                                <a href=""> تماس با ما </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="clientarea">
+                            <div class="loggein hidden">
+                                <i class="zmdi zmdi-account"></i><a href=""> ایمان مدائنی ، خوش آمدی </a>
+                            </div>
+                            <div class="signin">
+                                <i class="zmdi zmdi-account"></i>
+                                <a href="/Login"> ورود </a> /
+                                <a href="/Register"> عضویت </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            @RenderSection("SearchBox", false)
+        </div>
+    </div>
+
+    <!-- main manu -->
     <partial name="_MainMenu" />
-    <!--/ Nav End /-->
-    <!--/ Intro Skew Star /-->
-    @RenderSection("Header", false)
+    <!-- /main manu -->
+    <!-- content -->
     @RenderBody()
+    <!-- /content -->
+    <!-- footer -->
+    <partial name="_Footer" />
+    <!-- /footer -->
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <div id="preloader"></div>
-
-    <!-- JavaScript Libraries -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <script src="/lib/jquery/jquery-migrate.min.js"></script>
-    <script src="/lib/popper/popper.min.js"></script>
-    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/lib/easing/easing.min.js"></script>
-    <script src="/lib/counterup/jquery.waypoints.min.js"></script>
-    <script src="/lib/counterup/jquery.counterup.js"></script>
-    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="/lib/typed/typed.min.js"></script>
-    <!-- Contact Form JavaScript File -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
-    <script src="/js/jquery.validate.unobtrusive.min.js"></script>
-    <script src="/contactform/contactform.js"></script>
+    <script src="/js/jquery.validate.unobtrusive.js"></script>
 
-    <!-- Template Main Javascript File -->
-    <script src="/js/main.js"></script>
 </body>
 </html>
