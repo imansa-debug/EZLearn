@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EzLearn.Core.Convertor;
 using EzLearn.Core.Services;
 using EzLearn.Core.Services.Interfaces;
 using EzLearn.DataLayer.Context;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,6 +40,20 @@ namespace EzLearn.Web
 
             #region IoC
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IViewRenderService, RenderViewToString>();
+            #endregion
+
+            #region Authentication
+            services.AddAuthentication(options => {
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddCookie(options => {
+                options.LoginPath = "/Login";
+                options.LogoutPath = "/Logout";
+                options.ExpireTimeSpan = TimeSpan.FromMilliseconds(43200);
+            });
+            
             #endregion
         }
 
@@ -50,10 +66,11 @@ namespace EzLearn.Web
             }
 
 
-          
+            app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseRouting();
             app.UseMvcWithDefaultRoute();
-            app.UseStaticFiles();
+           
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>

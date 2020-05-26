@@ -9,6 +9,10 @@ using EzLearn.Core.Convertor;
 using EzLearn.DataLayer.Entities.User;
 using EzLearn.Core.Generator;
 using EzLearn.Core.Security;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using EzLearn.Core.Senders;
 
 namespace EzLearn.Web.Controllers
 {
@@ -16,10 +20,11 @@ namespace EzLearn.Web.Controllers
     {
 
         private readonly IUserService _userService;
-
-        public AccountController(IUserService userService)
+        private readonly IViewRenderService _viewRender;
+        public AccountController(IUserService userService,IViewRenderService viewRender)
         {
             _userService = userService;
+            _viewRender = viewRender;
         }
 
 
@@ -63,6 +68,15 @@ namespace EzLearn.Web.Controllers
             };
 
             _userService.AddUser(user);
+
+
+            #region send Activation Email
+
+
+            string body = _viewRender.RenderToStringAsync("_ActiverEmail", user);
+
+            SendEmail.Send(user.Email, "فعال سازی", body);
+        #endregion
             return View("SuccessRegister", user);
         }
 
@@ -88,7 +102,23 @@ namespace EzLearn.Web.Controllers
             if (user!=null)
             {
                 if (user.IsActive)
-                {// To Do Login User
+                {
+
+                    var claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.NameIdentifier,user.UserId.ToString()),
+                        new Claim(ClaimTypes.Name,user.UserName)
+                    };
+
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
+
+                    var properties = new AuthenticationProperties
+                    {
+                        IsPersistent = login.RemmemberMe
+                    };
+                    HttpContext.SignInAsync(principal, properties);
+
 
                     ViewBag.IsSuccess = true;
                     return View();
@@ -103,13 +133,89 @@ namespace EzLearn.Web.Controllers
         }
 
         #endregion
+        #region Logout
 
+        [Route("LogOut")]
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Redirect("/Login");
+        }
+        #endregion
 
+      
         public IActionResult ActiveAccount(string id)
         {
             ViewBag.IsActive = _userService.ActiveAccount(id);
 
             return View();
         }
+
+
+
+        #region ForgotPassword 
+
+        [Route("ForgotPassword")]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [Route("ForgotPassword")]
+        public IActionResult ForgotPassword(ForgotPasswordViewModel forget)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(forget);
+            }
+
+            string fixedEmail = FixedText.FixEmail(forget.Email);
+            var user = _userService.GetUserByEmail(fixedEmail);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "کاربری یافت نشد");
+                return View(forget);
+            }
+
+            string bodyEmail = _viewRender.RenderToStringAsync("_ForgotPassword", user);
+            SendEmail.Send(user.Email, "بازیابی حساب کاربری", bodyEmail);
+            ViewBag.IsSuccess = true;
+            return View();
+        }
+
+
+        #endregion
+
+
+        #region Reset Password
+
+        public ActionResult ResetPassword(string id)
+        {
+            return View(new ResetPasswordViewModel()
+            {ActiveCode=id
+            });
+        }
+        [HttpPost]
+        public ActionResult ResetPassword(ResetPasswordViewModel reset)
+        {
+            if (!ModelState.IsValid)
+                return View(reset);
+
+            var user = _userService.GetUserByActiveCode(reset.ActiveCode);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            string hashNewPassword = PasswordHelper.EncodePasswordMd5(reset.Password);
+            user.Password = hashNewPassword;
+
+            _userService.UpdateUser(user);
+
+            return Redirect("/Login");
+
+        }
+        #endregion
     }
 }

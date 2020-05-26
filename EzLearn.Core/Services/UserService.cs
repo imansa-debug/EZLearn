@@ -39,6 +39,16 @@ namespace EzLearn.Core.Services
             return addeddUser.Entity.UserId;
         }
 
+        public User GetUserByActiveCode(string activeCode)
+        {
+            return _context.Users.SingleOrDefault(u => u.ActiveCode == activeCode);
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            return _context.Users.SingleOrDefault(u => u.Email == email);
+        }
+
         public bool IsExistEmail(string email)
         {
             return _context.Users.Any(u => u.Email == email);
@@ -54,6 +64,12 @@ namespace EzLearn.Core.Services
             string hashedPassword = PasswordHelper.EncodePasswordMd5(login.Password);
             string email = FixedText.FixEmail(login.Email);
             return _context.Users.SingleOrDefault(u => u.Email == email && u.Password == hashedPassword);
+        }
+
+        public void UpdateUser(User user)
+        {
+            _context.Update(user);
+            _context.SaveChanges();
         }
     }
 }

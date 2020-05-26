@@ -148,3 +148,15 @@ F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Raz
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\ActiveAccount.cshtml.g.cs
 F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Footer.cshtml.g.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\EzLearn.Web.MvcApplicationPartsAssemblyInfo.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ActiverEmail.cshtml.g.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ForgotPassword.cshtml.g.cs
+F:\Projects\Asp.net core\EZLearn\EzLearn\EzLearn.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs

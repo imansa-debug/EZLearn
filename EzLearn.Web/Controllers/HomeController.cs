@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EzLearn.Web.Controllers
@@ -12,5 +13,7 @@ namespace EzLearn.Web.Controllers
         {
             return View();
         }
+        [Authorize]
+        public IActionResult Test() => View();
     }
 }
