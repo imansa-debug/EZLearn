@@ -40,10 +40,11 @@ namespace EzLearn.DataLayer.Entities.User
         [Display(Name = "تاریخ ثبت نام")]
         public DateTime RegisterDate { get; set; }
 
-
+        public bool IsDelete { get; set; }
         #region Relations
 
         public virtual List<UserRole> UserRoles { get; set; }
+        public List<Wallet.Wallet> Wallets { get; set; }
 
         #endregion
     }

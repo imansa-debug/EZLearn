@@ -85,8 +85,9 @@ namespace EzLearn.Web.Controllers
 
         #region Login
         [Route("Login")]
-        public IActionResult Login()
+        public ActionResult Login(bool EditProfile = false)
         {
+            ViewBag.EditProfile = EditProfile;
             return View();
         }
         [HttpPost]

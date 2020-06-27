@@ -41,6 +41,8 @@ namespace EzLearn.Web
             #region IoC
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IViewRenderService, RenderViewToString>();
+            services.AddTransient<IPermissionService, PermissionService>();
+            services.AddTransient<ICourseService, CourseService>();
             #endregion
 
             #region Authentication
@@ -51,7 +53,7 @@ namespace EzLearn.Web
             }).AddCookie(options => {
                 options.LoginPath = "/Login";
                 options.LogoutPath = "/Logout";
-                options.ExpireTimeSpan = TimeSpan.FromMilliseconds(43200);
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
             });
             
             #endregion
@@ -68,16 +70,20 @@ namespace EzLearn.Web
 
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UseRouting();
-            app.UseMvcWithDefaultRoute();
-           
-            app.UseEndpoints(endpoints =>
+     
+            app.UseMvc(routes =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                routes.MapRoute(
+                  name: "areas",
+                  template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+                routes.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
             });
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Hello World!");
+            });
+
         }
     }
 }
